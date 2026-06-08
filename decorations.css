@@ -1,0 +1,99 @@
+/* ============================================================
+   Whimsy layer — blooming flowers · butterflies · climbing vines
+   pastel, pointer-events:none, reduced-motion friendly
+   ============================================================ */
+
+.butterfly-layer {
+  position: fixed; inset: 0; z-index: 60;
+  pointer-events: none; overflow: hidden;
+}
+
+/* ---------- flowers ---------- */
+.deco-flower {
+  position: absolute; z-index: 2; pointer-events: none;
+  transform: scale(0) rotate(-35deg);
+  opacity: 0;
+  transition: transform .85s cubic-bezier(.34, 1.56, .64, 1), opacity .55s ease;
+  will-change: transform, opacity;
+}
+.deco-flower.bloomed { opacity: .92; transform: scale(1) rotate(0deg); }
+.deco-flower svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+.deco-flower.bloomed { animation: sway 6s ease-in-out infinite; }
+.deco-flower.bloomed.alt { animation-duration: 7.5s; animation-direction: reverse; }
+@keyframes sway {
+  0%, 100% { transform: scale(1) rotate(-5deg); }
+  50%      { transform: scale(1.04) rotate(5deg); }
+}
+
+/* ---------- climbing vines ---------- */
+.deco-vine {
+  position: absolute; bottom: 0; z-index: 1; pointer-events: none;
+  width: 90px; height: min(70%, 360px);
+  opacity: .96;
+}
+.deco-vine-left  { left: -14px; }
+.deco-vine-right { right: -14px; transform: scaleX(-1); }
+.deco-vine svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+.deco-vine .stem { transition: stroke-dashoffset 1.8s cubic-bezier(.4, .1, .2, 1); }
+.deco-vine.bloomed .stem { stroke-dashoffset: 0 !important; }
+
+.deco-vine .leaf {
+  opacity: 0;
+  transition: opacity .55s ease;
+}
+.deco-vine.bloomed .leaf { opacity: 1; }
+/* stagger leaves from the base upward (last child = top) */
+.deco-vine .leaf { transition-delay: .15s; }
+.deco-vine g:nth-of-type(2) .leaf { transition-delay: .35s; }
+.deco-vine g:nth-of-type(3) .leaf { transition-delay: .55s; }
+.deco-vine g:nth-of-type(4) .leaf { transition-delay: .75s; }
+.deco-vine g:nth-of-type(5) .leaf { transition-delay: .95s; }
+.deco-vine g:nth-of-type(6) .leaf { transition-delay: 1.15s; }
+.deco-vine g:nth-of-type(7) .leaf { transition-delay: 1.35s; }
+.deco-vine g:nth-of-type(n+8) .leaf { transition-delay: 1.5s; }
+
+/* ---------- butterflies ---------- */
+.butterfly {
+  position: absolute; top: 0; left: 0;
+  width: 50px; height: 45px;
+  will-change: transform;
+  filter: drop-shadow(0 4px 6px oklch(0.55 0.1 12 / 0.18));
+}
+.butterfly .wing { transform-box: fill-box; animation: flutter .26s ease-in-out infinite; }
+.butterfly .wing-l { transform-origin: right center; }
+.butterfly .wing-r { transform-origin: left center; }
+@keyframes flutter {
+  0%, 100% { transform: scaleX(1); }
+  50%      { transform: scaleX(0.32); }
+}
+
+.fly1 { animation: fly1 28s linear infinite; }
+.fly2 { animation: fly2 34s linear infinite; animation-delay: -10s; }
+
+@keyframes fly1 {
+  0%   { transform: translate(-8vw, 76vh) rotate(12deg) scale(.92); }
+  25%  { transform: translate(28vw, 40vh) rotate(-10deg) scale(1); }
+  55%  { transform: translate(60vw, 64vh) rotate(8deg) scale(.86); }
+  80%  { transform: translate(88vw, 26vh) rotate(-12deg) scale(1.06); }
+  100% { transform: translate(112vw, 50vh) rotate(10deg) scale(.92); }
+}
+@keyframes fly2 {
+  0%   { transform: translate(110vw, 22vh) rotate(-14deg) scale(.84); }
+  30%  { transform: translate(64vw, 58vh) rotate(10deg) scale(1); }
+  60%  { transform: translate(32vw, 24vh) rotate(-8deg) scale(.92); }
+  100% { transform: translate(-10vw, 50vh) rotate(12deg) scale(.84); }
+}
+
+@media (max-width: 640px) {
+  .butterfly { width: 40px; height: 36px; }
+  .deco-vine { width: 70px; height: min(60%, 300px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deco-flower.bloomed { animation: none; }
+  .butterfly .wing { animation: none; }
+  .fly1, .fly2 { animation: none; }
+  .butterfly { display: none; }
+}

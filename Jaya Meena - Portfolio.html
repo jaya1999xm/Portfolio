@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jaya Meena — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="decorations.css" />
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<!-- magic wand cursor -->
+<div class="cursor-wand" aria-hidden="true">
+  <svg viewBox="0 0 64 64">
+    <defs>
+      <linearGradient id="wandH" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#c69ad1"/>
+        <stop offset="1" stop-color="#d76b89"/>
+      </linearGradient>
+      <radialGradient id="wandS" cx="0.4" cy="0.35" r="0.7">
+        <stop offset="0" stop-color="#fff3c9"/>
+        <stop offset="0.55" stop-color="#f0c96b"/>
+        <stop offset="1" stop-color="#e0ad4d"/>
+      </radialGradient>
+    </defs>
+    <line x1="22" y1="22" x2="54" y2="54" stroke="url(#wandH)" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="54" cy="54" r="2.6" fill="#fff" opacity="0.7"/>
+    <g class="star">
+      <path d="M18 6 L20.9 13.95 L29.4 14.3 L22.8 19.5 L25.1 27.7 L18 23 L10.9 27.7 L13.2 19.5 L6.6 14.3 L15.1 13.95 Z" fill="url(#wandS)" stroke="#e0ad4d" stroke-width="1.2" stroke-linejoin="round"/>
+      <circle cx="15" cy="13" r="2.2" fill="#fff" opacity="0.85"/>
+    </g>
+  </svg>
+</div>
+
+<!-- nav -->
+<nav class="nav" aria-label="Primary">
+  <a class="brand" href="#top"><span class="bloom"></span>Jaya Meena</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#interests">Interests</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-resume" href="https://drive.google.com/file/d/1jDMZ-bq7XI9kvVv2aqDU2GphUVLc9eQD/view" target="_blank" rel="noopener noreferrer">Résumé</a>
+  </div>
+  <button class="nav-burger" aria-label="Menu"><span></span></button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">hi there, I'm</p>
+        <h1 class="reveal d1">Jaya <span class="grad">Meena</span></h1>
+        <div class="role reveal d2"><span class="dot"></span>Software Engineer</div>
+        <p class="lead reveal d2">I build scalable systems and turn complex, messy problems into clean, reliable solutions — lately exploring where backend engineering meets AI&nbsp;/&nbsp;ML.</p>
+        <div class="hero-cta reveal d3">
+          <a class="btn btn-primary" href="#contact">Get in touch ♡</a>
+          <a class="btn btn-ghost" href="#experience">See my work</a>
+        </div>
+      </div>
+
+      <div class="hero-portrait reveal d1">
+        <div class="portrait-ring">
+          <image-slot id="portrait" shape="circle" src="images/profile.png" placeholder="drop your photo ♡"></image-slot>
+        </div>
+        <div class="pill-badge badge-1"><span class="pb-dot" style="background:var(--rose)"></span>Backend &amp; Distributed Systems</div>
+        <div class="pill-badge badge-2"><span class="pb-dot" style="background:var(--gold)"></span>AI / ML curious</div>
+        <div class="pill-badge badge-3"><span class="pb-dot" style="background:var(--mauve)"></span>Painter 🎨</div>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll down">scroll<span class="arrow"></span></a>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about" data-screen-label="About">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">a little</span>
+      <h2>About me</h2>
+      <div class="deco-line"></div>
+    </div>
+    <div class="about-inner">
+      <p class="reveal d1"><span class="hi">I'm a software engineer</span> who loves building scalable systems and turning complex problems into clean, reliable solutions. I've worked across microservices, distributed systems, and data pipelines — and lately I've been exploring the intersection of backend engineering and AI&nbsp;/&nbsp;ML. Most of all, I enjoy building things that actually make an impact.</p>
+      <div class="tags reveal d2">
+        <span class="tag"><span class="heart">❤</span>Distributed Systems</span>
+        <span class="tag"><span class="heart">❤</span>Microservices</span>
+        <span class="tag"><span class="heart">❤</span>Data Pipelines</span>
+        <span class="tag"><span class="heart">❤</span>AI / ML</span>
+        <span class="tag"><span class="heart">❤</span>Backend Engineering</span>
+        <span class="tag"><span class="heart">❤</span>Scalability</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="experience" id="experience" data-screen-label="Experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">where I've</span>
+      <h2>Experience</h2>
+      <div class="deco-line"></div>
+    </div>
+
+    <div class="timeline">
+      <!-- HubSpot -->
+      <div class="tl-item reveal">
+        <span class="tl-dot">♡</span>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <div class="tl-role">Software Developer Intern</div>
+              <div class="tl-co">HubSpot</div>
+            </div>
+            <span class="tl-date">May 2025 – Aug 2025</span>
+          </div>
+          <p class="tl-summary">Built backend systems that directly impacted revenue and scalability.</p>
+          <ul class="tl-list">
+            <li>Designed and built a <b>subscription migration system from scratch</b>, letting customers seamlessly move from Stripe / PayPal to HubSpot's native subscription platform — owning the end-to-end architecture from data ingestion to migration workflows and validation.</li>
+            <li>Migrated <b>1,000+ active subscriptions in a month</b>, contributing to increased revenue and system consolidation.</li>
+            <li>Built <b>Spark data pipelines processing 1M+ records daily</b>, optimizing query performance by ~30%.</li>
+            <li>Engineered <b>Kafka-driven communication</b> for reliable, scalable, fault-tolerant data flow across services.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AWS -->
+      <div class="tl-item reveal">
+        <span class="tl-dot">♡</span>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <div class="tl-role">Software Developer</div>
+              <div class="tl-co">Amazon Web Services</div>
+            </div>
+            <span class="tl-date">Oct 2022 – Aug 2024</span>
+          </div>
+          <p class="tl-summary">Worked on Amazon EMR Serverless — large-scale distributed systems powering interactive data workloads.</p>
+          <ul class="tl-list">
+            <li>Designed and implemented the <b>resource allocation &amp; orchestration layer</b> enabling interactive, low-latency Spark workloads on EMR Serverless.</li>
+            <li>Built an <b>asynchronous container orchestration system</b> that dynamically provisions resources by workload demand, balancing fast startup with efficient utilization.</li>
+            <li>Implemented <b>DNS-based networking</b> for seamless communication between distributed containers, and built microservices orchestrating resource provisioning for Spark.</li>
+            <li>Designed centralized logging &amp; debugging with <b>S3 and CloudWatch</b>, and cut redundant validation logic to increase validation speed by <b>~70%</b>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Walmart -->
+      <div class="tl-item reveal">
+        <span class="tl-dot">♡</span>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <div class="tl-role">Software Developer Intern</div>
+              <div class="tl-co">Walmart Global Tech</div>
+            </div>
+            <span class="tl-date">Jan 2022 – Jun 2022</span>
+          </div>
+          <p class="tl-summary">Combined machine learning with developer tooling to improve design workflows.</p>
+          <ul class="tl-list">
+            <li>Built an <b>ML-powered design validation platform for Figma</b>, reducing manual review effort by ~90%.</li>
+            <li>Designed <b>graph-based algorithms</b> to extract UI components and hierarchical relationships from design files.</li>
+            <li>Trained a deep-learning model achieving <b>98% accuracy</b> detecting UI inconsistencies in color, layout, and typography — enabling scalable validation across screens.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="edu" id="education" data-screen-label="Education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">what I</span>
+      <h2>Education</h2>
+      <div class="deco-line"></div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal d1">
+        <div class="blob"></div>
+        <div class="cap">🎓</div>
+        <h3>M.S. in Computer Science</h3>
+        <div class="school">University at Buffalo</div>
+        <span class="yr">2024 – 2025</span>
+      </div>
+      <div class="edu-card reveal d2">
+        <div class="blob"></div>
+        <div class="cap">📚</div>
+        <h3>B.Tech in Information Technology</h3>
+        <div class="school">IIIT Allahabad</div>
+        <span class="yr">2018 – 2022</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERESTS ============ -->
+<section class="interests" id="interests" data-screen-label="Interests">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">off the clock</span>
+      <h2>When I'm not coding</h2>
+      <div class="deco-line"></div>
+    </div>
+    <p class="intro reveal d1">I love painting realistic scenery — capturing light, landscapes, and quiet moments. It's where I slow down and make something thoughtful and intentional, just for the joy of it. 🎨</p>
+    <div class="gallery">
+      <div class="frame reveal d1"><span class="tape"></span><image-slot id="art1" shape="rounded" radius="8" src="images/paint1.jpeg" placeholder="drop a painting"></image-slot><div class="cap">scenery i</div></div>
+      <div class="frame reveal d1"><span class="tape"></span><image-slot id="art2" shape="rounded" radius="8" src="images/paint2.jpeg" placeholder="drop a painting"></image-slot><div class="cap">scenery ii</div></div>
+      <div class="frame reveal d2"><span class="tape"></span><image-slot id="art3" shape="rounded" radius="8" src="images/paint3.png" placeholder="drop a painting"></image-slot><div class="cap">scenery iii</div></div>
+      <div class="frame reveal d2"><span class="tape"></span><image-slot id="art4" shape="rounded" radius="8" src="images/paint4.png" placeholder="drop a painting"></image-slot><div class="cap">scenery iv</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" data-screen-label="Contact">
+  <div class="wrap">
+    <div class="card reveal">
+      <span class="eyebrow">say hello</span>
+      <h2>Let's build something ♡</h2>
+      <p>I'm always happy to chat about backend systems, AI / ML, or a good landscape. Drop me a line — or grab my résumé below.</p>
+      <div class="contact-links">
+        <a class="clink" href="mailto:jayameena1810@gmail.com">✉️ Email</a>
+        <a class="clink" href="https://www.linkedin.com/in/jayaxm" target="_blank" rel="noopener noreferrer">in&nbsp; LinkedIn</a>
+        <a class="clink" href="https://github.com/jaya1999xm" target="_blank" rel="noopener noreferrer">&lt;/&gt; GitHub</a>
+        <a class="clink" href="https://drive.google.com/file/d/1jDMZ-bq7XI9kvVv2aqDU2GphUVLc9eQD/view" target="_blank" rel="noopener noreferrer">📄 Résumé</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="made">made with love &amp; a little pink ✿</div>
+  <div>© 2026 Jaya Meena</div>
+</footer>
+
+<script src="image-slot.js"></script>
+<script src="portfolio.js"></script>
+<script src="decorations.js"></script>
+</body>
+</html>
